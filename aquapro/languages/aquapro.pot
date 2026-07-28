@@ -1,0 +1,37 @@
+# Copyright (C) 2026 AquaPro
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: AquaPro 1.0.0\n"
+"Report-Msgid-Bugs-To: https://aquapro.example.com\n"
+"POT-Creation-Date: 2026-06-22T00:00:00+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: \n"
+"X-Domain: aquapro\n"
+
+#. Theme strings are wrapped in __()/_e()/esc_html__() with the 'aquapro' text domain.
+#. Regenerate this template with WP-CLI:  wp i18n make-pot . languages/aquapro.pot
+#. Then create per-locale files, e.g. languages/aquapro-tr_TR.po / .mo
+
+msgid "Get a Free Quote"
+msgstr ""
+
+msgid "Request Callback"
+msgstr ""
+
+msgid "Call Now"
+msgstr ""
+
+msgid "Our Services"
+msgstr ""
+
+msgid "Frequently Asked Questions"
+msgstr ""
+
+msgid "What Our Customers Say"
+msgstr ""
+
+msgid "Get In Touch"
+msgstr ""

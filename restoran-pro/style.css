@@ -1,0 +1,138 @@
+/*
+Theme Name: Restoran Pro
+Theme URI: https://example.com
+Author: Yavuz Aykac
+Description: Restoran, kafe, lokanta ve fine-dining işletmeleri için sıcak, iştah açıcı ve rezervasyon odaklı WordPress teması. Menü bölümü, tıkla-ara, harita ve mobil rezervasyon çubuğu içerir.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.6
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+Text Domain: restoran-pro
+*/
+
+:root {
+  --r-ink: #2a1d12;
+  --r-body: #5b4a3a;
+  --r-muted: #8a7866;
+  --r-bg: #fffaf3;
+  --r-bg-soft: #fbf1e3;
+  --r-cream: #f7ead6;
+  --r-gold: #c0892f;
+  --r-gold-dark: #9a6a1d;
+  --r-red: #8c2f2f;
+  --r-green: #3f6b46;
+  --r-line: #ecdcc6;
+  --r-white: #fff;
+  --r-shadow: 0 18px 44px -20px rgba(80, 50, 20, 0.35);
+  --r-shadow-sm: 0 8px 22px -14px rgba(80, 50, 20, 0.4);
+  --r-radius: 14px;
+  --r-grad: linear-gradient(135deg, #c0892f, #e0b15c);
+  --r-hero: linear-gradient(160deg, #2a1d12 0%, #4a3320 65%, #6b4a26 130%);
+  --r-wrap: 1180px;
+  --r-serif: "Georgia", "Times New Roman", serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: "Segoe UI", system-ui, Arial, sans-serif; color: var(--r-body); background: var(--r-bg); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+a { color: var(--r-gold-dark); text-decoration: none; }
+img { max-width: 100%; display: block; }
+h1,h2,h3,h4 { margin: 0; color: var(--r-ink); line-height: 1.2; font-family: var(--r-serif); font-weight: 700; }
+p { margin: 0; } ul { margin: 0; }
+
+.r-wrap { max-width: var(--r-wrap); margin: 0 auto; padding: 0 24px; }
+.r-section { padding: 84px 0; }
+.r-section--soft { background: var(--r-bg-soft); }
+.r-eyebrow { display:inline-block; font-size:13px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--r-gold-dark); margin-bottom:14px; }
+.r-h2 { font-size: clamp(28px,4vw,42px); margin-bottom:14px; }
+.r-lead { font-size:18px; color:var(--r-muted); max-width:620px; }
+.r-center { text-align:center; } .r-center .r-lead { margin:0 auto; }
+
+.r-btn { display:inline-flex; align-items:center; gap:8px; font-weight:700; font-size:16px; padding:14px 26px; border-radius:10px; border:none; cursor:pointer; transition:transform .15s, box-shadow .2s, background .2s; }
+.r-btn:hover { transform: translateY(-2px); }
+.r-btn--gold { background: var(--r-grad); color:#2a1d12; box-shadow:0 10px 24px -12px rgba(192,137,47,.8); }
+.r-btn--call { background:#fff; color:var(--r-ink); border:1px solid var(--r-line); }
+.r-btn--call:hover { background: var(--r-cream); }
+.r-btn--ghost { background:rgba(255,255,255,.1); color:#fff; border:1px solid rgba(255,255,255,.4); }
+.r-btn--lg { padding:16px 32px; font-size:17px; }
+
+/* Header */
+.r-topbar { background:var(--r-ink); color:#e8d7bf; font-size:13.5px; }
+.r-topbar .r-wrap { display:flex; justify-content:space-between; gap:16px; padding:9px 24px; flex-wrap:wrap; }
+.r-topbar a { color:#e8d7bf; } .r-topbar a:hover { color:#fff; }
+.r-header { position:sticky; top:0; z-index:50; background:rgba(255,250,243,.95); backdrop-filter:blur(8px); border-bottom:1px solid var(--r-line); }
+.r-header .r-wrap { display:flex; align-items:center; justify-content:space-between; padding:16px 24px; }
+.r-brand { display:flex; align-items:center; gap:12px; }
+.r-brand__mark { width:46px; height:46px; border-radius:50%; background:var(--r-grad); display:grid; place-items:center; font-size:24px; box-shadow:var(--r-shadow-sm); }
+.r-brand__name { font-family:var(--r-serif); font-weight:700; color:var(--r-ink); font-size:20px; line-height:1.1; }
+.r-brand__name small { display:block; font-family:"Segoe UI",sans-serif; font-size:11px; font-weight:600; color:var(--r-muted); letter-spacing:.18em; text-transform:uppercase; }
+.r-nav { display:flex; gap:26px; }
+.r-nav a { color:var(--r-ink); font-weight:600; font-size:15px; } .r-nav a:hover { color:var(--r-gold-dark); }
+.r-burger { display:none; background:none; border:none; cursor:pointer; padding:8px; }
+.r-burger span { display:block; width:24px; height:2px; background:var(--r-ink); margin:5px 0; border-radius:2px; }
+
+/* Hero */
+.r-hero { position:relative; background:var(--r-hero); color:#fff; overflow:hidden; }
+.r-hero::after { content:""; position:absolute; right:-100px; top:-100px; width:420px; height:420px; background:radial-gradient(circle, rgba(192,137,47,.35), transparent 70%); }
+.r-hero .r-wrap { position:relative; z-index:2; text-align:center; padding:96px 24px 104px; }
+.r-hero__eyebrow { color:#e0b15c; letter-spacing:.25em; font-weight:700; text-transform:uppercase; font-size:13px; }
+.r-hero h1 { color:#fff; font-size:clamp(36px,6vw,62px); margin:16px 0 18px; }
+.r-hero__lead { font-size:19px; color:#e8d7bf; max-width:600px; margin:0 auto 30px; }
+.r-hero__actions { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+
+/* Tanitim seridi */
+.r-strip { background:var(--r-cream); }
+.r-strip .r-wrap { display:flex; justify-content:space-around; gap:20px; padding:22px 24px; flex-wrap:wrap; text-align:center; }
+.r-strip__item { display:flex; flex-direction:column; }
+.r-strip__item b { color:var(--r-ink); font-family:var(--r-serif); font-size:18px; }
+.r-strip__item span { color:var(--r-muted); font-size:13.5px; }
+
+/* Hakkinda */
+.r-about { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; }
+.r-about__img { border-radius:var(--r-radius); overflow:hidden; box-shadow:var(--r-shadow); aspect-ratio:4/3; background:var(--r-grad); display:grid; place-items:center; font-size:90px; }
+
+/* Menu */
+.r-menu-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px 48px; }
+.r-menu-item { display:flex; justify-content:space-between; gap:16px; padding:16px 0; border-bottom:1px dashed var(--r-line); }
+.r-menu-item h4 { font-size:18px; margin-bottom:4px; }
+.r-menu-item p { font-size:14px; color:var(--r-muted); }
+.r-menu-item__price { font-family:var(--r-serif); font-weight:700; color:var(--r-gold-dark); font-size:18px; white-space:nowrap; }
+
+/* Ozellik kartlari */
+.r-grid3 { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+.r-card { background:#fff; border:1px solid var(--r-line); border-radius:var(--r-radius); padding:30px; text-align:center; transition:transform .2s, box-shadow .2s; }
+.r-card:hover { transform:translateY(-4px); box-shadow:var(--r-shadow); }
+.r-card__ico { font-size:40px; margin-bottom:14px; }
+.r-card h3 { font-size:20px; margin-bottom:8px; }
+
+/* CTA / rezervasyon */
+.r-cta { background:var(--r-hero); color:#fff; border-radius:18px; padding:52px; text-align:center; box-shadow:var(--r-shadow); }
+.r-cta h2 { color:#fff; font-size:clamp(26px,3.5vw,38px); margin-bottom:12px; }
+.r-cta p { color:#e8d7bf; font-size:18px; margin-bottom:26px; }
+
+/* Saatler + iletisim */
+.r-info { display:grid; grid-template-columns:1fr 1fr; gap:40px; }
+.r-hours { list-style:none; padding:0; }
+.r-hours li { display:flex; justify-content:space-between; padding:12px 0; border-bottom:1px solid var(--r-line); }
+.r-hours b { color:var(--r-ink); }
+.r-map { border-radius:var(--r-radius); overflow:hidden; border:1px solid var(--r-line); min-height:300px; }
+.r-map iframe { width:100%; height:100%; min-height:300px; border:0; display:block; }
+
+/* Footer */
+.r-footer { background:var(--r-ink); color:#cdbba3; padding:54px 0 0; font-size:14.5px; }
+.r-footer a { color:#cdbba3; } .r-footer a:hover { color:#fff; }
+.r-footer__grid { display:grid; grid-template-columns:1.5fr 1fr 1fr; gap:32px; padding-bottom:40px; }
+.r-footer h4 { color:#fff; font-size:16px; margin-bottom:14px; font-family:var(--r-serif); }
+.r-footer ul { list-style:none; padding:0; display:grid; gap:9px; }
+.r-footer__bottom { border-top:1px solid rgba(255,255,255,.12); padding:18px 0; text-align:center; color:#9c8a72; font-size:13.5px; }
+
+/* Mobil rezervasyon cubugu */
+.r-mobilebar { display:none; }
+@media (max-width:860px){
+  .r-mobilebar{ display:grid; grid-template-columns:1fr 1fr; position:fixed; left:0; right:0; bottom:0; z-index:60; box-shadow:0 -8px 24px -10px rgba(0,0,0,.3); }
+  .r-mobilebar a{ display:flex; align-items:center; justify-content:center; gap:8px; padding:15px; font-weight:700; color:#2a1d12; }
+  .r-mobilebar .m-call{ background:var(--r-cream);} .r-mobilebar .m-res{ background:var(--r-grad);}
+  body{ padding-bottom:54px; }
+}
+@media (max-width:960px){ .r-about,.r-info{ grid-template-columns:1fr; } .r-menu-grid{ grid-template-columns:1fr; } .r-grid3{ grid-template-columns:1fr; } .r-footer__grid{ grid-template-columns:1fr 1fr; } }
+@media (max-width:680px){ .r-nav{ display:none; } .r-burger{ display:block; } .r-nav.open{ display:flex; flex-direction:column; position:absolute; top:100%; left:0; right:0; background:#fff; padding:16px 24px; gap:14px; border-bottom:1px solid var(--r-line);} .r-section{ padding:56px 0;} .r-footer__grid{ grid-template-columns:1fr; } .r-cta{ padding:32px 22px; } }

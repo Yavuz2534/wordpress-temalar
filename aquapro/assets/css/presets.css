@@ -1,0 +1,47 @@
+/* AquaPro — Color presets & dark mode (layer 2).
+ *
+ * Dark mode strategy:
+ *  - .aqua-dark-auto   → follows prefers-color-scheme
+ *  - .aqua-dark-toggle → user toggles; we set data-theme on <html>
+ *  - .aqua-dark-off    → light only
+ */
+
+/* Shared dark palette */
+[data-theme="dark"],
+.aqua-dark-auto:not([data-theme="light"]) {
+  --aqua-ink: #eaf1fb;
+  --aqua-body: #aebccd;
+  --aqua-muted: #7d8da3;
+  --aqua-bg: #0b1320;
+  --aqua-surface: #111c2e;
+  --aqua-surface-2: #16243a;
+  --aqua-line: rgba(255, 255, 255, .10);
+  --aqua-card: #131f33;
+  --aqua-shadow: 0 20px 46px -22px rgba(0, 0, 0, .6);
+  --aqua-shadow-sm: 0 8px 22px -14px rgba(0, 0, 0, .6);
+}
+
+/* Auto mode only flips when the OS asks for dark AND the user hasn't forced light */
+@media (prefers-color-scheme: dark) {
+  .aqua-dark-auto:not([data-theme="light"]) {
+    --aqua-ink: #eaf1fb;
+    --aqua-body: #aebccd;
+    --aqua-muted: #7d8da3;
+    --aqua-bg: #0b1320;
+    --aqua-surface: #111c2e;
+    --aqua-surface-2: #16243a;
+    --aqua-line: rgba(255, 255, 255, .10);
+    --aqua-card: #131f33;
+    --aqua-shadow: 0 20px 46px -22px rgba(0, 0, 0, .6);
+    --aqua-shadow-sm: 0 8px 22px -14px rgba(0, 0, 0, .6);
+  }
+}
+
+/* Static preset fallbacks (used if no Customizer override is present).
+ * The Customizer normally injects these; these classes also let demo/preview
+ * environments switch presets without PHP. */
+.aqua-preset-aqua   { --aqua-accent: #1d6fe0; --aqua-accent-2: #06b6d4; }
+.aqua-preset-navy   { --aqua-accent: #1e3a8a; --aqua-accent-2: #3b82f6; }
+.aqua-preset-teal   { --aqua-accent: #0d9488; --aqua-accent-2: #14b8a6; }
+.aqua-preset-sunset { --aqua-accent: #ea580c; --aqua-accent-2: #f59e0b; }
+.aqua-preset-forest { --aqua-accent: #15803d; --aqua-accent-2: #65a30d; }
