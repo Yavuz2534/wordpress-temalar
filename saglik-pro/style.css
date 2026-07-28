@@ -92,7 +92,6 @@ h1,h2,h3,h4 { margin:0; color:var(--s-ink); line-height:1.2; font-weight:800; } 
 .s-marquee:hover .s-marquee__track, .s-marquee:focus-within .s-marquee__track { animation-play-state:paused; }
 .s-marquee .s-card { flex:0 0 340px; width:340px; margin:6px 24px 6px 0; }
 @keyframes s-marquee { from { transform:translateX(0); } to { transform:translateX(-50%); } }
-@media (prefers-reduced-motion:reduce){ .s-marquee{ -webkit-mask-image:none; mask-image:none; } .s-marquee__track{ animation:none; flex-wrap:wrap; justify-content:center; gap:24px; } .s-marquee .s-card{ margin:0; } .s-marquee .s-card[aria-hidden="true"]{ display:none; } }
 .s-card { background:#fff; border:1px solid var(--s-line); border-radius:var(--s-radius); padding:30px; transition:transform .2s, box-shadow .2s, border-color .2s; }
 .s-card:hover { transform:translateY(-4px); box-shadow:var(--s-shadow); border-color:#9fd5cd; }
 .s-card__ico { width:56px; height:56px; border-radius:14px; background:var(--s-bg-soft2); color:var(--s-teal); display:grid; place-items:center; font-size:26px; margin-bottom:18px; }
