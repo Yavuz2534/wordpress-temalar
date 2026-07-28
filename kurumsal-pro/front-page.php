@@ -36,10 +36,16 @@ get_header();
 
 <section class="k-section" id="hizmetler"><div class="k-wrap">
 	<div class="k-center" style="margin-bottom:48px;"><span class="k-eyebrow">Hizmetlerimiz</span><h2 class="k-h2">Size Özel Profesyonel Çözümler</h2><p class="k-lead">İşinizin her alanında, uzman ekibimizle yanınızdayız.</p></div>
-	<div class="k-grid k-grid--3">
-		<?php foreach ( kp_services() as $s ) : ?>
-			<div class="k-card"><div class="k-card__ico"><?php echo esc_html( $s['icon'] ); ?></div><h3><?php echo esc_html( $s['title'] ); ?></h3><p><?php echo esc_html( $s['desc'] ); ?></p></div>
-		<?php endforeach; ?>
+	<div class="k-marquee" aria-label="Hizmetlerimiz">
+		<div class="k-marquee__track">
+			<?php
+			$kp_serv = kp_services();
+			foreach ( array( 1, 2 ) as $kp_pass ) :
+				foreach ( $kp_serv as $s ) : ?>
+					<div class="k-card"<?php echo 2 === $kp_pass ? ' aria-hidden="true"' : ''; ?>><div class="k-card__ico"><?php echo esc_html( $s['icon'] ); ?></div><h3><?php echo esc_html( $s['title'] ); ?></h3><p><?php echo esc_html( $s['desc'] ); ?></p></div>
+				<?php endforeach;
+			endforeach; ?>
+		</div>
 	</div>
 </div></section>
 

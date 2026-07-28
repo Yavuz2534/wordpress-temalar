@@ -36,10 +36,16 @@ get_header();
 
 <section class="s-section" id="hizmetler"><div class="s-wrap">
 	<div class="s-center" style="margin-bottom:48px;"><span class="s-eyebrow">Hizmetlerimiz</span><h2 class="s-h2">Kapsamlı Sağlık Hizmetleri</h2><p class="s-lead">Tek bir merkezde, tüm sağlık ihtiyaçlarınız için uzman ekip.</p></div>
-	<div class="s-grid s-grid--3">
-		<?php foreach ( sp_services() as $s ) : ?>
-			<div class="s-card"><div class="s-card__ico"><?php echo esc_html( $s['icon'] ); ?></div><h3><?php echo esc_html( $s['title'] ); ?></h3><p><?php echo esc_html( $s['desc'] ); ?></p></div>
-		<?php endforeach; ?>
+	<div class="s-marquee" aria-label="Hizmetlerimiz">
+		<div class="s-marquee__track">
+			<?php
+			$sp_serv = sp_services();
+			foreach ( array( 1, 2 ) as $sp_pass ) :
+				foreach ( $sp_serv as $s ) : ?>
+					<div class="s-card"<?php echo 2 === $sp_pass ? ' aria-hidden="true"' : ''; ?>><div class="s-card__ico"><?php echo esc_html( $s['icon'] ); ?></div><h3><?php echo esc_html( $s['title'] ); ?></h3><p><?php echo esc_html( $s['desc'] ); ?></p></div>
+				<?php endforeach;
+			endforeach; ?>
+		</div>
 	</div>
 </div></section>
 
