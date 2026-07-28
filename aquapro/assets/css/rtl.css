@@ -1,8 +1,0 @@
-/* AquaPro — RTL overrides (layer 4). Most layout uses logical properties, so
- * only a few directional details need flipping. */
-.aqua-ba__before { border-right: 0; border-left: 3px solid #fff; }
-.aqua-ba__label { left: auto; right: 12px; }
-.aqua-ba__after .aqua-ba__label { right: auto; left: 12px; }
-.aqua-menu .sub-menu { left: auto; right: 0; }
-.aqua-review__stars { letter-spacing: 0; }
-.aqua-card__ico, .aqua-contact__ico { transform: scaleX(1); }
