@@ -30,7 +30,7 @@ $address = kp_opt( 'address', 'Levent, İstanbul' );
 			</ul>
 		</div>
 	</div>
-	<div class="k-footer__bottom">© <?php echo esc_html( date_i18n( 'Y' ) . ' ' . $name ); ?> · Tüm hakları saklıdır.</div>
+	<div class="k-footer__bottom">© <?php echo esc_html( date_i18n( 'Y' ) . ' ' . $name ); ?> · Tüm hakları saklıdır.<br><small>Tasarım &amp; Kod © Yavuz Selim Aykaç</small></div>
 </div></footer>
 <div class="k-mobilebar">
 	<a class="m-call" href="tel:<?php echo esc_attr( $tel ); ?>">📞 Ara</a>

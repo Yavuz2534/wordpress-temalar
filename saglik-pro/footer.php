@@ -30,7 +30,7 @@ $address = sp_opt( 'address', 'Nişantaşı, İstanbul' );
 			</ul>
 		</div>
 	</div>
-	<div class="s-footer__bottom">© <?php echo esc_html( date_i18n( 'Y' ) . ' ' . $name ); ?> · Tüm hakları saklıdır.</div>
+	<div class="s-footer__bottom">© <?php echo esc_html( date_i18n( 'Y' ) . ' ' . $name ); ?> · Tüm hakları saklıdır.<br><small>Tasarım &amp; Kod © Yavuz Selim Aykaç</small></div>
 </div></footer>
 <div class="s-mobilebar">
 	<a class="m-call" href="tel:<?php echo esc_attr( $tel ); ?>">📞 Ara</a>

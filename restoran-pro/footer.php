@@ -30,7 +30,7 @@ $address = rp_opt( 'address', 'Bağdat Cad. No:1, İstanbul' );
 			</ul>
 		</div>
 	</div>
-	<div class="r-footer__bottom">© <?php echo esc_html( date_i18n( 'Y' ) . ' ' . $name ); ?> · Tüm hakları saklıdır.</div>
+	<div class="r-footer__bottom">© <?php echo esc_html( date_i18n( 'Y' ) . ' ' . $name ); ?> · Tüm hakları saklıdır.<br><small>Tasarım &amp; Kod © Yavuz Selim Aykaç</small></div>
 </div></footer>
 <div class="r-mobilebar">
 	<a class="m-call" href="tel:<?php echo esc_attr( $tel ); ?>">📞 Ara</a>
